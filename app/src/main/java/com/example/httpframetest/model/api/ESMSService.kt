@@ -1,6 +1,8 @@
 package com.example.httpframetest.model.api
 
 import com.example.httpframetest.BuildConfig
+import com.example.httpframetest.model.bean.DataResponse
+import com.example.httpframetest.model.bean.ESMSResponse
 import retrofit2.http.GET
 
 /**
@@ -14,6 +16,6 @@ interface ESMSService {
     }
 
     @GET("api/pad/config/params")
-    suspend fun getData():
+    suspend fun getData(): ESMSResponse<DataResponse>
 
 }
